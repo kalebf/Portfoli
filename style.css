@@ -178,3 +178,100 @@ footer {
     font-size: 0.85rem;
     color: #94a3b8;
 }
+/* Base Section Styling */
+.portfolio-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.portfolio-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  
+}
+.portfolio-section h3 {
+    color: #38bdf8;
+}
+
+/* Carousel Container: Restricts height and hides overflow vertical cuts */
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 15px; /* Space for scrollbar styling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+}
+
+/* Carousel Track: Flex layout keeps items in a single horizontal row */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+/* Carousel Item: Individual card links */
+.carousel-item {
+  flex: 0 0 300px; /* Do not shrink/grow, fix width to 300px */
+  text-decoration: none;
+  color: #333;
+
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail Wrapper: Forces a unified aspect ratio for screenshots */
+.thumbnail-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* Standard laptop screen aspect ratio */
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops image cleanly to fill the frame */
+  object-position: top center; /* Aligns to top of website screenshot */
+}
+
+/* Project Text Details */
+.carousel-item h3 {
+  font-size: 18px;
+  margin: 15px 15px 5px 15px;
+}
+
+.carousel-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px 15px;
+}
+
+/* Custom Scrollbar Styling (Optional) */
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
